@@ -1,9 +1,256 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>search results page for google.com</title>
+        <!-- css stylesheets-->
+        <link href="stylesheets/reset.css" type="text/css" media="all">
+        <link href="stylesheets/style.css" type="text/css" media="all">
         <style>
+            html, body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            }
+
+            input {
+            word-spacing: normal;
+            letter-spacing: normal;
+            text-decoration: none;
+            text-transform: none;
+            text-shadow: none;
+            background-color: transparent;
+            text-rendering: auto;
+            color: black;
+            text-indent: 20px;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            border: none;
+            outline: none;
+            }
             
+
+            .header {
+            border-bottom: 1px solid #cfcfcf;
+            padding-bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            }
+
+            .google-logo {
+            display: flex;
+            position: fixed;
+            margin: 27px;
+            }
+
+            #logosize {
+            height: 2.5rem;
+            width: 7.5rem;
+            }
+
+            .search {
+            display: flex;
+            background: white;
+            cursor: text;
+            position: fixed;
+            margin: 20px auto 15px 150px;
+            padding: 1px;
+            border-color: #cfcfcf;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 25px;
+            outline: none;
+            width: 700px;
+            height: 40px;
+            }
+
+            .search:hover{
+            box-shadow: .15rem .15rem .5rem rgba(0, 0, 0, .1), -.15rem -.05rem .5rem rgba(0, 0, 0, .1);
+            }
+
+            .topright {
+            float: right;     
+            }
+
+            button {
+            display: flex;
+            float: right;              
+            margin: 20px 20px 0 auto;
+            background-color: #0c7ae0;
+            border: 0;
+            padding: 12px 25px 12px 25px;
+            border-radius: 10px;
+            
+            }
+            
+            button:hover {
+                background-color: #2d8feb;
+            }
+
+            #sign-in {
+            background-color: #0c7ae0 transparent;
+            border: white;
+            border-radius: 10%;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            }
+
+            #sign-in:hover {
+            background-color: #2d8feb;  
+            }
+
+            .below-sbar {
+
+            }
+
+            .main {
+
+            }
+            
+            .result-links {
+            font-size: 18px;
+            color: #003cff;
+            }
+
+            .contain-results {
+
+            }
+
+            .ad-page {
+
+            }
+
+            .search-result {
+
+            }
+
+            .video-result {
+
+            }
+
+            .people-ask {
+
+            }
+
+            .image-result {
+
+            }
+
+            .also-search {
+
+            }
+
+            .related-search {
+
+            }
+
+            .next-page {
+
+            }
+
+            ul {
+            list-style: none;
+            margin:0;
+            padding: 0;
+            overflow: hidden;
+            }
+            .top-nav {
+            font-size: 13px;
+            margin: 15px; 
+            }
+       
+            li {
+            float: left;
+            }
+      
+            li a {
+            display: block;
+            color:rgb(73, 73, 73);
+            text-decoration: none;
+            padding: 10px;
+            }
+      
+            li a:hover {
+            color: black;
+            }
+            
+            .location {
+            bottom: 37px;
+            position: fixed;
+            width: 100%;
+            background-color: #f3f3f3;
+            color:rgb(73, 73, 73);
+            border: 1px solid;
+            border-color: rgb(73, 73, 73, .2); 
+            border-width: 1 0 1 0;
+            padding: 10px;
+            padding-left: 107px;
+            font-size: 14px;
+            }
+
+            .bot-nav {
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            background-color: #f3f3f3;
+            color:rgb(73, 73, 73);
+            border-color: rgb(73, 73, 73, .2);
+            border: 0;
+            padding: 0px;
+            font-size: 14px;
+            padding-left: 100px;
+            }
+
+
+
         </style>
+        <title>Project Odin - html-css google hard version</title>
     </head>
+    <body>
+        <!--All header material (logo, search bar and icon links)-->
+        <header class="header">
+            <div class="google-logo"><a href="http://www.google.com"><img id="logosize" src="images/google-logo.png" alt="Google's logo"></a></div>
+            <div class="search"><input type="text" name="searchbar" value="build this webpage"></div>
+            
+            <div class="topright"><button><a href="#" id="sign-in">Sign in</a></button></div>
+
+            <div class="below-sbar"></div>
+        </header>
+        <!--All search results-->
+        <main class="main">
+            <div class="contain-results"></div>
+            <div class="ad-page"></div>
+            <div class="search-result"></div>
+            <div class="search-result"></div>
+            <div class="video-result"></div>
+            <div class="search-result"></div>
+            <div class="search-result"></div>
+            <div class="people-ask"></div>
+            <div class="search-result"></div>
+            <div class="search-result"></div>
+            <div class="image-result"></div>
+            <div class="search-result"></div>
+            <div class="search-result"></div>
+            <div class="also-search"></div>
+            <div class="related-search"></div>
+            <div class="next-page"></div>
+
+            <footer>
+                <div class="location">Canada</div>
+                <div class="bot-nav">
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Send feedback</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </body>
 </html>
